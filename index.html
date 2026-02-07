@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharohar: The Eternal Pride</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FDF5E6;
+            /* Buttons fast work karein iske liye */
+            touch-action: manipulation;
+        }
+
+        .royal-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(94, 0, 0, 0.6), rgba(94, 0, 0, 0.4)), url('images/rj1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Mobile responsive fix: Fixed attachment sirf desktop pe kaam karti hai */
+            background-attachment: fixed;
+        }
+
+        @media (max-width: 768px) {
+            .hero-bg {
+                background-attachment: scroll;
+            }
+        }
+
+        .gold-gradient {
+            background: linear-gradient(90deg, #BF953F, #FF8C00, #B38728, #FF9933, #AA771C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            /* Mobile par Shringar buttons ko hamesha dikhane ke liye */
+            @media (max-width: 1024px) {
+                .group .opacity-0 {
+                    opacity: 1 !important;
+                    /* Button aur naam hamesha dikhega */
+                    background: rgba(0, 0, 0, 0.4);
+                    /* Parda thoda light kar diya taaki photo bhi dikhe */
+                }
+
+                .group-hover\:scale-110 {
+                    transform: scale(1.05);
+                    /* Mobile par halka zoom */
+                }
+
+                /* Agar tum chahti ho ki button hamesha dikhe par thoda niche ho */
+                .group .translate-y-full {
+                    transform: translateY(0) !important;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body class="text-[#3d2b1f]">
+
+    <header
+        class="hero-bg min-h-screen w-full flex flex-col justify-center items-center text-center px-6 border-b-8 border-[#E2B37B] relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/30 z-0"></div>
+
+        <div class="relative z-10">
+            <h1 class="royal-font text-5xl sm:text-6xl md:text-8xl gold-gradient font-bold mb-4 drop-shadow-2xl">
+                DHAROHAR
+            </h1>
+            <p class="text-base sm:text-xl md:text-2xl tracking-[0.2em] uppercase text-orange-100 px-2">
+                Preserving Heritage. Honoring Pride.
+            </p>
+            <div class="mt-12 animate-bounce">
+                <a href="#palaces"
+                    class="border-2 border-[#FF8C00] text-[#FF8C00] px-10 py-4 rounded-full hover:bg-[#FF8C00] hover:text-white transition duration-300 font-bold bg-[#5E0000]/60 backdrop-blur-sm">
+                    Explore the Palaces
+                </a>
+            </div>
+        </div>
+    </header>
+    <section id="palaces" class="py-20 px-6 md:px-10 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2
+                    class="royal-font text-3xl md:text-4xl text-[#5E0000] border-b-4 border-[#E2B37B] inline-block pb-2">
+                    The Royal Landmarks (Virasaat)</h2>
+                <p class="mt-4 text-gray-600 italic">Echoes of glory carved in sandstone</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative group overflow-hidden rounded-sm shadow-lg border border-orange-100">
+                    <button onclick="openModal('fort1')"
+                        class="absolute top-3 right-3 z-20 bg-[#5E0000] text-white w-10 h-10 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold shadow-lg hover:bg-[#FF8C00] transition-colors border border-[#E2B37B]">?</button>
+                    <img src="images/meghfort.jpg" alt="Mehrangarh Fort"
+                        class="w-full h-72 object-cover transition duration-700 group-hover:scale-105">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#5E0000] to-transparent p-6 translate-y-full group-hover:translate-y-0 transition duration-500">
+                        <h4 class="royal-font text-white text-xl">Mehrangarh Fort</h4>
+                        <p class="text-orange-200 text-xs uppercase tracking-widest">Jodhpur</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-sm shadow-lg border border-orange-100">
+                    <button onclick="openModal('fort2')"
+                        class="absolute top-3 right-3 z-20 bg-[#5E0000] text-white w-10 h-10 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold shadow-lg hover:bg-[#FF8C00] transition-colors border border-[#E2B37B]">?</button>
+                    <img src="images/kumb2.jpg" alt="kumbalgarh Fort"
+                        class="w-full h-72 object-cover transition duration-700 group-hover:scale-105">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#5E0000] to-transparent p-6 translate-y-full group-hover:translate-y-0 transition duration-500">
+                        <h4 class="royal-font text-white text-xl">kumbalgarh Fort</h4>
+                        <p class="text-orange-200 text-xs uppercase tracking-widest">The Living Palace</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-sm shadow-lg border border-orange-100">
+                    <button onclick="openModal('fort3')"
+                        class="absolute top-3 right-3 z-20 bg-[#5E0000] text-white w-10 h-10 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold shadow-lg hover:bg-[#FF8C00] transition-colors border border-[#E2B37B]">?</button>
+                    <img src="images/jaswanthada.jpg" alt="Jaswant Thada"
+                        class="w-full h-72 object-cover transition duration-700 group-hover:scale-105">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#5E0000] to-transparent p-6 translate-y-full group-hover:translate-y-0 transition duration-500">
+                        <h4 class="royal-font text-white text-xl">Jaswant Thada</h4>
+                        <p class="text-orange-200 text-xs uppercase tracking-widest">Taj Mahal of Marwad</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-sm shadow-lg border border-orange-100">
+                    <button onclick="openModal('fort4')"
+                        class="absolute top-3 right-3 z-20 bg-[#5E0000] text-white w-10 h-10 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold shadow-lg hover:bg-[#FF8C00] transition-colors border border-[#E2B37B]">?</button>
+                    <img src="images/amber2.jpg" alt="Amber Fort"
+                        class="w-full h-72 object-cover transition duration-700 group-hover:scale-105">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#5E0000] to-transparent p-6 translate-y-full group-hover:translate-y-0 transition duration-500">
+                        <h4 class="royal-font text-white text-xl">Amber Fort</h4>
+                        <p class="text-orange-200 text-xs uppercase tracking-widest">Ancient Echoes</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-sm shadow-lg border border-orange-100">
+                    <button onclick="openModal('fort5')"
+                        class="absolute top-3 right-3 z-20 bg-[#5E0000] text-white w-10 h-10 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold shadow-lg hover:bg-[#FF8C00] transition-colors border border-[#E2B37B]">?</button>
+                    <img src="images/chittorgarh.webp" alt="Chittorgarh Fort"
+                        class="w-full h-72 object-cover transition duration-700 group-hover:scale-105">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#5E0000] to-transparent p-6 translate-y-full group-hover:translate-y-0 transition duration-500">
+                        <h4 class="royal-font text-white text-xl">Chittorgarh Fort</h4>
+                        <p class="text-orange-200 text-xs uppercase tracking-widest">The Heart of City</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-sm shadow-lg border border-orange-100">
+                    <button onclick="openModal('fort6')"
+                        class="absolute top-3 right-3 z-20 bg-[#5E0000] text-white w-10 h-10 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold shadow-lg hover:bg-[#FF8C00] transition-colors border border-[#E2B37B]">?</button>
+                    <img src="images/Jaisalmer-Fort.jpg" alt="Jaisalmer Fort"
+                        class="w-full h-72 object-cover transition duration-700 group-hover:scale-105">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#5E0000] to-transparent p-6 translate-y-full group-hover:translate-y-0 transition duration-500">
+                        <h4 class="royal-font text-white text-xl">Jaisalmer Fort</h4>
+                        <p class="text-orange-200 text-xs uppercase tracking-widest">Desert Architecture</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="heritage" class="py-20 px-6 md:px-10 bg-[#FDF5E6]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2
+                    class="royal-font text-3xl md:text-4xl text-[#5E0000] border-b-4 border-[#E2B37B] inline-block pb-2">
+                    Artisans of the Soil (Hastkala)</h2>
+                <p class="mt-4 text-gray-600 italic">Handcrafted magic from the heart of Marwad</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <script>
+                    const hastNames = ["Blue Pottery", "Leather Mojaris", "Woodwork", "Paintings", "Marble Art", "Lac Bangles"];
+                    const hastImgUrls = ["images/bluepottery.jpg", "images/mojari.jpg", "images/woodenwork.webp", "images/madhubani.jpg", "images/marble.jpg", "images/lac.jpg"];
+                    const hastIds = ["hast1", "hast2", "hast3", "hast4", "hast5", "hast6"];
+
+                    for (let i = 0; i < 6; i++) {
+                        document.write(`
+                    <div class="group relative overflow-hidden rounded-lg border-2 border-[#E2B37B] shadow-2xl bg-white">
+                        <button onclick="openModal('${hastIds[i]}')" class="absolute top-3 right-3 z-20 bg-[#5E0000] text-white w-10 h-10 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold shadow-lg hover:bg-[#FF8C00] transition-colors border border-[#E2B37B]">?</button>
+                        
+                        <img src="${hastImgUrls[i]}" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                        
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#5E0000] via-[#5E0000]/60 to-transparent p-6">
+                            <h3 class="royal-font text-white text-xl">${hastNames[i]}</h3>
+                            <p class="text-orange-200 text-xs uppercase tracking-widest">Handcrafted Art</p>
+                        </div>
+                    </div>
+                    `);
+                    }
+                </script>
+            </div>
+            <div class="w-full flex justify-center items-center mt-20 mb-10">
+                <p class="text-center text-[#5E0000] text-xl md:text-2xl font-bold italic max-w-2xl leading-relaxed">
+                    "Sadiyon purani ye kala aaj lupt ho rahi hai. Inhe pehchan kar hi hum apni mitti ko zinda rakh sakte
+                    hain."
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="bg-[#5E0000] py-20 px-6 md:px-10 text-white border-y-8 border-[#E2B37B]">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 text-center md:text-left">
+                <h2 class="royal-font text-4xl md:text-5xl text-[#FF8C00] mb-6 border-l-4 border-[#FF8C00] pl-4">The
+                    Royal Shringar</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <script>
+                    const names = ["Borla", "Aad", "Bajubandh", "Chuda", "Hathfool", "Poshak"];
+                    const imgUrls = ["images/borla.jpg", "images/aad.jpg", "images/bajubandh.jpg", "images/chuda.avif", "images/hathfool.jpg", "images/poshak.webp"];
+
+                    for (let i = 0; i < 6; i++) {
+                        document.write(`
+                    <div class="group relative overflow-hidden rounded-lg border-2 border-[#E2B37B] shadow-2xl bg-white text-center">
+                        
+                        <div class="md:hidden">
+                            <button onclick="openModal('item${i + 1}')" 
+                                style="position: absolute; top: 12px; right: 12px; z-index: 50; background-color: #5E0000; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; border: 2px solid #E2B37B; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                                ?
+                            </button>
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 15px; z-index: 10;">
+                                <span class="royal-font" style="color: #FF8C00; font-size: 1.2rem; font-weight: bold;">${names[i]}</span>
+                            </div>
+                        </div>
+
+                        <img src="${imgUrls[i]}" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                        
+                        <div class="hidden md:flex absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex flex-col items-center justify-center p-4">
+                            <span class="royal-font text-[#FF8C00] text-2xl font-bold mb-4">${names[i]}</span>
+                            <button onclick="openModal('item${i + 1}')" class="bg-[#FF8C00] text-[#5E0000] text-sm font-bold py-3 px-8 rounded shadow-md hover:bg-white transition">Aan ro Shringar</button>
+                        </div>
+                    </div>
+                `);
+                    }
+                </script>
+            </div>
+
+            <div class="w-full flex justify-center items-center mt-24 mb-16">
+                <div class="max-w-4xl text-center px-8 py-10 border-y-2 border-[#E2B37B]/30 bg-[#5E0000]/5 rounded-xl">
+                    <p class="text-[#FF8C00] text-2xl md:text-3xl font-bold italic leading-relaxed tracking-wide">
+                        "Ye gehne sirf sona-chaandi nahi, hamare purvajon ka ashirwad hain. Inhe pehenna hamari
+                        sanskriti ko zinda rakhna hai."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 text-center bg-[#FDF5E6] px-6">
+        <h2 class="royal-font text-4xl md:text-6xl mb-12 text-[#5E0000]">The Rajasthan Soul</h2>
+        <div class="flex flex-wrap justify-center gap-10">
+            <div class="relative w-64 p-8 bg-white border-t-8 border-[#5E0000] shadow-2xl rounded-b-lg">
+                <button onclick="openModal('mani1')"
+                    class="absolute top-2 right-2 bg-[#5E0000] text-white w-8 h-8 rounded-full text-xs font-bold hover:bg-[#FF8C00] transition">?</button>
+                <h4 class="royal-font text-[#FF8C00] text-xl mb-2">Boli</h4>
+                <p class="text-[#3d2b1f] text-sm">Sweetness of the Rajasthani tongue.</p>
+            </div>
+            <div class="relative w-64 p-8 bg-white border-t-8 border-[#FF8C00] shadow-2xl rounded-b-lg">
+                <button onclick="openModal('mani2')"
+                    class="absolute top-2 right-2 bg-[#5E0000] text-white w-8 h-8 rounded-full text-xs font-bold hover:bg-[#FF8C00] transition">?</button>
+                <h4 class="royal-font text-[#5E0000] text-xl mb-2">Sanskriti</h4>
+                <p class="text-[#3d2b1f] text-sm">Roots that run deeper than the dunes.</p>
+            </div>
+            <div class="relative w-64 p-8 bg-white border-t-8 border-[#B22222] shadow-2xl rounded-b-lg">
+                <button onclick="openModal('mani4')"
+                    class="absolute top-2 right-2 bg-[#5E0000] text-white w-8 h-8 rounded-full text-xs font-bold hover:bg-[#FF8C00] transition">?</button>
+                <h4 class="royal-font text-[#B22222] text-xl mb-2">Johar</h4>
+                <p class="text-[#3d2b1f] text-sm">The ultimate sacrifice for honor.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="infoModal" class="hidden fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-4">
+        <div
+            class="bg-[#FDF5E6] max-w-lg w-full rounded-lg border-4 border-[#FF8C00] relative p-6 md:p-8 shadow-2xl overflow-y-auto max-h-[90vh]">
+            <button onclick="closeModal()"
+                class="absolute top-2 right-4 text-4xl text-[#5E0000] font-bold">&times;</button>
+            <h2 id="modalTitle"
+                class="royal-font text-2xl md:text-3xl text-[#5E0000] mb-4 border-b-2 border-[#E2B37B] pb-2 text-center">
+            </h2>
+            <p id="modalDescription" class="text-base md:text-lg leading-relaxed text-[#3d2b1f] text-center"></p>
+        </div>
+    </div>
+
+    <footer class="py-10 bg-[#2D0000] border-t-4 border-[#FF8C00] text-center text-orange-200">
+        <p class="royal-font uppercase tracking-[0.3em] text-lg mb-2 gold-text">DHAROHAR</p>
+        <p class="royal-font uppercase tracking-widest text-xs opacity-70">Aayushi's BCA Project &copy; 2026</p>
+    </footer>
+
+    <script>
+        // AllData stays identical
+        const allData = {
+            'fort1': { title: 'Mehrangarh Fort', desc: 'Rao Jodha, the chief of the Rathore clan, is credited with the origin of Jodhpur in India. He founded Jodhpur in 1459 as the capital of Marwar (Mandore was the previous capital). One year after the accession to the throne, Jodha decided to move his capital to the safer location of Jodhpur. With the trusted aid of Rao Nara (son of Rao Samra), the Mewar forces were subdued at Mandore.The foundation of the fort was decided on 12 May 1459 by Jodha on a rocky hill 9 kilometres (5.6 mi) to the south of Mandore. This hill was known as Bhakurcheeria, the mountain of birds. According to legend to build the fort he had to displace the hills sole human occupant, a hermit called Cheeria Nathji, the lord of birds' },
+            'fort2': { title: 'Kumbalgarh Fort', desc: 'Kumbhalgarh also known as the Great Wall of India, is a fortress located on the western range of the Aravalli Hills in Kumbhalgarh, Rajsamand district, Rajasthan, India. It was built by Mandan who was the chief architect of the Kingdom of Mewar.Rana Lakha won this entire area and plains of Godwar from Chauhan Rajputs of Nadol in late 14th century Rana Kumbha ordered for the construction of the fort in 1448 AD according to the Kumbhalgarh inscription. The fort served as Rana Kumbhas second most favoured capital.' },
+            'fort3': { title: 'Jaswant Thada', desc: 'Jaswant Thada was commissioned in 1899 by Maharaja Sardar Singh of Jodhpur as a royal cenotaph in memory of his father, Maharaja Jaswant Singh II, and was completed in 1906 AD under the patronage of the Rathore dynasty. It is situated a short distance from Mehrangarh Fort, it was intended both as the Jodhpur royal family cremation ground and as an enduring symbol of their legacy. Over the 20th century, the site became managed by the Mehrangarh Museum Trust, which has conserved its grounds and established an onsite museum displaying portraits of Marwar rulers and didactic panels on regional history.' },
+            'fort4': { title: 'Amber Fort', desc: 'Amber was a Meena state, ruled by a Susawat clan. After Kakil Deo defeated the Susawats he made Amber the capital of Dhundhar after Khoh. In early times, the state of Jaipur was known as Amber or Dhundhar and was controlled by Meena chiefs of five different tribes. They were under suzerainty of the Bargurjar Rajput Raja of Deoti. Later a Kachhwaha prince, Dulha Rai, destroyed the sovereignty of Meenas and also defeated Bargurjars of Deoli and took Dhundhar fully under Kachwaha rule.The Amber Fort was originally built by Raja Man Singh. Jai Singh I expanded it in the early 1600s. Improvements and additions were made by successive rulers over the next 150 years.until the capital was moved from Amer to Jaipur the history of Amer is indelibly linked to these rulers as they founded their empire at Amer.' },
+            'fort5': { title: 'Chittorgarh', desc: 'Originally called Chitrakuta, the Chittor Fort is said to have been built by Chitranga, a Mori king.Chittor has a history going back several centuries. It was an ancient centre of Jain tradition. Chittor is adjacent to the ancient city of Madhyamika. The Jain inscriptions at Mathura from the Kushana period (1st–3rd centuries CE) mention a "Majjhimilla" branch of the "Kottiya" gana, indicating that it was a major Jain centre. The famous Acharya Haribhadra Suri (6th century CE) was born in Chittor and wrote "Dhurtopakhyana" there.' },
+            'fort6': { title: 'Jaisalmer Fort', desc: 'Legend has it that the fort was built by Rawal Jaisal, a Bhati Rajput, in 1156 CE. The story says that it superseded an earlier construction at Lodhruva, with which Jaisal was unsatisfied and thus, a new capital was established when Jaisal founded the city of Jaisalmer.Around 1299 CE, Rawal Jait Singh I faced a long siege by Alauddin Khalji of Delhi Sultanate, who is said to have been provoked by a Bhati raid on his treasure caravan. By the end of the siege, facing certain defeat, the Bhati Rajput women committed Jauhar, and the male warriors under the command of Mularaja met their fatal end in battle with the Sultans forces. For a few years after the successful siege, the fort remained under the sway of Delhi Sultanate, before being eventually reoccupied by some surviving Bhatis.' },
+            'hast1': { title: 'Blue Pottery', desc: 'Blue pottery is widely recognized as a traditional craft of Jaipur of Central Asian origin.The name blue pottery comes from the eye-catching cobalt blue dye used to colour the pottery. It is one of many Eurasian types of blue and white pottery.Jaipur blue pottery has been strongly influenced by the Persian ceramic style but it has developed its own designs and motifs' },
+            'hast2': { title: 'Leather Mojaris', desc: 'Leather mojari is a traditional, handcrafted, slip-on footwear originating from the Indian subcontinent, with deep roots in the Mughal Empire (16th-17th centuries) and Rajasthan. Renowned for their upturned toes, intricate embroidery (Zardozi), and lack of distinction between left and right feet, they were popularized as luxury wear by rulers like Emperor Jahangir and they are now cherished as a cultural, eco-friendly fashion staple.' },
+            'hast3': { title: 'Woodwork', desc: 'Rajasthans woodwork is a centuries-old tradition, deeply rooted in the Rajput and Mughal-era palaces, havelis, and temples, renowned for intricate carvings on teak, sheesham, and sandalwood. Historically supported by royal patronage, skilled artisans from Jodhpur, Udaipur, Barmer, and Kishangarh specialized in detailed jali (lattice) work, ornate doors, and furniture' },
+            'hast4': { title: ' Madhubani Paintings', desc: 'Madhubani painting, also known as Mithila art, is a 2,500-year-old traditional art form originating from the Mithila region of Bihar, India, and parts of Nepal. Historically, it was created by women on mud walls to decorate homes during festivals and weddings, allegedly initiated by King Janak for Sitas wedding to Lord Ram. It gained international recognition after William Archer discovered it in 1934. ' },
+            'hast5': { title: 'Marble Art', desc: 'Marble art in Rajasthan, originating in the 16th century under Rajput patronage, is a celebrated tradition featuring intricate jali (latticework), exquisite carvings, and painting, with Jaipur as the primary hub. Utilizing famous Makrana marble, artisans create, durable, high-quality statues,, and decorative items that blend Mughal-influenced, detailed craftsmanship with,, traditional, Rajasthani,styles.' },
+            'hast6': { title: 'Lac Bangles', desc: 'Lac bangles, known as chooda or manihar, are an ancient, auspicious, and integral part of Rajasthani culture, with their history in Jaipur dating back to the city’s founding in 1727. The craft was championed by Maharaja Sawai Jai Singh-II, who brought craftsmen from Manoharpur to create these symbolic, handmade resin ornaments.' },
+            'item1': { title: 'Borla', desc: 'The Borla is a traditional, spherical forehead ornament (maang tikka) originating from Rajasthan, India, historically worn by Rajput queens and princesses to signify royalty and marital status.' },
+            'item2': { title: 'Rajputi Aad', desc: 'The Rajputi Aad (or Aad) is a traditional, heavy choker-style necklace originating from the royal courts of Rajasthan, embodying centuries of Rajput heritage, wealth, and bridal tradition. Historically, it was a vital part of a brides trousseau, often gifted by the grooms family to represent marital blessings, prosperity, and status' },
+            'item3': { title: 'Bajubandh', desc: 'The Rajputi Bajuband is an ancient, traditional Indian armlet worn on the upper arm, originating from Rajasthan and dating back to the 6th-century Sanskrit text Viramitrodaya. Historically, these armlets were worn by both Rajput warriors and royalty as symbols of strength, power, and wealth, eventually evolving into a staple of bridal jewelry.' },
+            'item4': { title: 'Chuda', desc: 'The Rajputi Chuda is a traditional set of bridal bangles deeply rooted in the royal heritage, culture, and social structure of Rajasthan, India. Historically, it symbolizes marital status, prosperity, and the transition of a bride into her new life, often passed down as heirlooms.' },
+            'item5': { title: 'Hathphool', desc: 'Originally a piece of bridal jewelry, it has evolved over centuries from a symbol of royal luxury to a celebrated element of Indian bridal fashion, deeply intertwined with the regions artistry and folklore.' },
+            'item6': { title: 'Poshak', desc: 'The Rajputi Poshak is a traditional, four-piece royal ensemble from Rajasthan, originating around the 16th century. Worn by queens and noblewomen, it symbolizes status, modesty, and warrior heritage.' },
+            'mani1': { title: 'Boli (Dialects)', desc: 'Rajasthani boli (Rajasthani language/dialects) is a group of Indo-Aryan languages spoken in Rajasthan, known for their distinct, vibrant, and poetic nature. Here are the main specialities of Rajasthani dialects: Ergative Syntax Structure, Rich Oral Tradition & Literature , Polite & Honorific Nature.' },
+            'mani2': { title: 'Sanskriti (Culture)', desc: 'Rajasthani Sanskriti (culture) is renowned for its vibrant, royal heritage, characterized by colorful attire (bandhani, ghaghara-odhni), intricate handicrafts (wood carving, textiles), folk music/dance (Ghoomar, Kalbeliya), and traditional cuisine like Dal-Bati-Churma. It is deeply rooted in history, honoring bravery with festivals like Gangaur and Teej..' },
+            'mani4': { title: 'Johar (Supreme Sacrifice)', desc: ' a practice primarily associated with Rajput history, was a profound act of collective self-immolation performed by women, children, and sometimes elderly people to protect their honor and avoid capture, enslavement, and rape by enemy invaders when defeat in battle was imminent.The bravery and sacrifice of these women are still honored and remembered in Rajasthan, particularly through the annual Jauhar Mela held in Chittorgarh.' }
+        };
+
+        function openModal(id) {
+            const data = allData[id];
+            if (data) {
+                document.getElementById('modalTitle').innerText = data.title;
+                document.getElementById('modalDescription').innerText = data.desc;
+                document.getElementById('infoModal').classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('infoModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function (event) {
+            if (event.target == document.getElementById('infoModal')) { closeModal(); }
+        }
+    </script>
+</body>
+
+</html>
